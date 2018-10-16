@@ -25,7 +25,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView title, user_rating, release_date, synopsis;
     ImageView poster_image;
 
-    //Add your api key here
+    //api key here
     String api_key = "46093d09984b286c030a13a48437aea4";
 
     @Override
@@ -35,6 +35,7 @@ public class DetailActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // XML refrences
         title = (TextView) findViewById(R.id.title);
         user_rating = (TextView) findViewById(R.id.user_rating);
         release_date = (TextView) findViewById(R.id.release_date);
@@ -47,7 +48,7 @@ public class DetailActivity extends AppCompatActivity {
         FetchMovieDetails fetchMovieDetails = new FetchMovieDetails();
         fetchMovieDetails.execute();
     }
-
+    //Async Task
     public class FetchMovieDetails extends AsyncTask<Void, Void, Void> {
 
         String LOG_TAG = "FetchMovieDetails";
@@ -83,6 +84,7 @@ public class DetailActivity extends AppCompatActivity {
                 if(buffer.length() == 0) {
                     return null;
                 }
+
                 movieJsonStr = buffer.toString();
                 Log.d(LOG_TAG, "JSON Parsed: " + movieJsonStr);
 

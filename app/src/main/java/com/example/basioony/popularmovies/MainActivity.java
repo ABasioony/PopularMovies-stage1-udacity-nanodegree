@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     String LOG_TAG = "MainActivity";
 
-    //Add your api key here
+    // api key here
     String api_key = "46093d09984b286c030a13a48437aea4";
 
     @Override
